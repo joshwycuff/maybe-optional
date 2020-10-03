@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/joshwycuff/maybe-optional/compare/v0.2.0...v0.2.1) (2020-10-03)
+
+
+### Bug Fixes
+
+* build during prepublish ([09e2ba6](https://github.com/joshwycuff/maybe-optional/commit/09e2ba662ff4fd9fa0c901c6d748aaa5413e9595))
+
 # [0.2.0](https://github.com/joshwycuff/maybe-optional/compare/v0.1.0...v0.2.0) (2020-10-03)
 
 
