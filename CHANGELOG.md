@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/joshwycuff/maybe-optional/compare/v0.2.1...v0.2.2) (2020-10-03)
+
+
+### Bug Fixes
+
+* fix files to add to release ([dbf252f](https://github.com/joshwycuff/maybe-optional/commit/dbf252ff5e35677187ab7cc98682084a2df293b7))
+
 ## [0.2.1](https://github.com/joshwycuff/maybe-optional/compare/v0.2.0...v0.2.1) (2020-10-03)
 
 
