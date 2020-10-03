@@ -1,15 +1,16 @@
 export type Nothing = null | undefined;
 
-export function isNothing(value: any): boolean {
-    return value === null || value === undefined;
-}
-
 // Remove types from T that are assignable to U
 type Diff<T, U> = T extends U ? never : T;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Something = Diff<any, Nothing>;
 
-export function isSomething(value: any): boolean {
+export function isNothing(value: Nothing | Something): boolean {
+    return value === null || value === undefined;
+}
+
+export function isSomething(value: Nothing | Something): boolean {
     return !isNothing(value);
 }
 

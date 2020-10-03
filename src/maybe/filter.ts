@@ -9,5 +9,6 @@ export function filter<T extends Something>(
             return maybe;
         }
     }
+
     return null;
 }

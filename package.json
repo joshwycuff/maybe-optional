@@ -4,8 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "commit": "git cz",
-    "build": "tsc"
+    "check:all": "yarn check:format && yarn check:lint && yarn check:test",
+    "check:format": "prettier --check src/**/*.ts",
+    "check:lint": "eslint src/**/*.ts",
+    "check:test": "jest --no-watch tests/",
+    "fix:all": "yarn fix:format && yarn fix:lint",
+    "fix:format": "prettier --write src/**/*.ts",
+    "fix:lint": "eslint --fix src/**/*.ts"
   },
   "config": {
     "commitizen": {
@@ -14,7 +21,9 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn check:format",
+      "pre-push": "yarn check:all"
     }
   },
   "commitlint": {
@@ -31,7 +40,9 @@
     "@semantic-release/git"
   ],
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -39,7 +50,7 @@
         "path": "@semantic-release/git",
         "assets": [
           "package.json",
-          "package-lock.json",
+          "yarn.lock",
           "CHANGELOG.md"
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
@@ -55,8 +66,11 @@
     "@semantic-release/npm": "^7.0.6",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.10.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "prettier": "^2.1.2",
