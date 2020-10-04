@@ -16,6 +16,14 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: yarn install
+      - name: Generate coverage report
+        run: yarn test
+        continue-on-error: true
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage/*.json # optional
+          flags: unittests # optional
       - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -9,10 +9,11 @@
     "check:all": "yarn check:format && yarn check:lint && yarn check:test",
     "check:format": "prettier --check src/**/*.ts",
     "check:lint": "eslint src/**/*.ts",
-    "check:test": "jest --no-watch tests/",
+    "check:test": "yarn test",
     "fix:all": "yarn fix:format && yarn fix:lint",
     "fix:format": "prettier --write src/**/*.ts",
     "fix:lint": "eslint --fix src/**/*.ts",
+    "test": "jest --no-watch tests/",
     "prepublishOnly": "yarn check:all && yarn build"
   },
   "config": {
