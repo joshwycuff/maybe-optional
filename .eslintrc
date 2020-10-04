@@ -1,12 +1,36 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "unicorn",
+    "jsdoc"
   ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ]
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:jsdoc/recommended",
+    "airbnb-typescript"
+  ],
+  "rules": {
+    "unicorn/no-null": "off",
+    "indent": ["error", 4],
+    "@typescript-eslint/indent": ["error", 4],
+    "import/prefer-default-export": "off",
+    "object-curly-newline": "off",
+    "require-jsdoc": ["error", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true,
+        "ArrowFunctionExpression": false,
+        "FunctionExpression": false
+      }
+    }]
+  }
 }
