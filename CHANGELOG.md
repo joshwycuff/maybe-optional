@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/joshwycuff/maybe-optional/compare/v0.2.2...v0.3.0) (2020-10-04)
+
+
+### Features
+
+* implement OptionalEmptyError ([7175c58](https://github.com/joshwycuff/maybe-optional/commit/7175c582690a5c905bc3daab303b7375d6ef5cba))
+
 ## [0.2.2](https://github.com/joshwycuff/maybe-optional/compare/v0.2.1...v0.2.2) (2020-10-03)
 
 
