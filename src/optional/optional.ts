@@ -186,8 +186,8 @@ export class Optional<T extends Something> {
      * @returns {T} The contained value.
      * @throws {Error} Throws given error if the Optional is empty.
      */
-    public orElseThrow(error: Error): T {
-        return orElseThrow(this.maybe, error);
+    public orElseThrow(error?: Error): T {
+        return orElseThrow(this.maybe, orElse(error, new OptionalEmptyError('Optional is empty')));
     }
 
     /**

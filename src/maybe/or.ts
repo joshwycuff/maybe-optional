@@ -1,4 +1,5 @@
 import { isNothing, Maybe, Something } from './maybe';
+import { MaybeNothingError } from './error';
 
 /**
  * Return the value of maybe if it is Something. Otherwise, return other.
@@ -41,9 +42,9 @@ export function orElseGet<T extends Something>(maybe: Maybe<T>, fn: () => T): T 
  * @returns {T} The value of maybe if it is Something.
  * @throws {Error} Throws given error if value of maybe is Nothing.
  */
-export function orElseThrow<T extends Something>(maybe: Maybe<T>, error: Error): T {
+export function orElseThrow<T extends Something>(maybe: Maybe<T>, error?: Maybe<Error>): T {
     if (isNothing(maybe)) {
-        throw error;
+        throw orElse(error, new MaybeNothingError());
     }
 
     return maybe as T;
