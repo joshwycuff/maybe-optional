@@ -1,4 +1,4 @@
-import { Optional } from '../../src/optional/optional';
+import { Optional } from '../../src';
 import { Maybe } from '../../src/maybe/maybe';
 
 describe('Optional', () => {
