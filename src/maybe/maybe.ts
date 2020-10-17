@@ -26,4 +26,4 @@ export function isSomething(value: Nothing | Something): boolean {
     return !isNothing(value);
 }
 
-export type Maybe<T extends Something> = Nothing | T;
+export type Maybe<T extends Something = Something> = Nothing | T;
