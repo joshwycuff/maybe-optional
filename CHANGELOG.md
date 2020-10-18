@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/joshwycuff/maybe-optional/compare/v0.3.0...v0.4.0) (2020-10-18)
+
+
+### Features
+
+* default Maybe generic to Something ([b8124c2](https://github.com/joshwycuff/maybe-optional/commit/b8124c2836faf0ffb6388036d6c5619935498046))
+* make error input optional for orElseThrow ([1cbd859](https://github.com/joshwycuff/maybe-optional/commit/1cbd85916c70a66cab4253fa676279d607cdcf5e))
+* provide easier imports ([3ccea5f](https://github.com/joshwycuff/maybe-optional/commit/3ccea5f53013747d2fdb6f96410bb8ebb9f82da0))
+
 # [0.3.0](https://github.com/joshwycuff/maybe-optional/compare/v0.2.2...v0.3.0) (2020-10-04)
 
 
